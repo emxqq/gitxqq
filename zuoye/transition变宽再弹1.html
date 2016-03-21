@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div{width:200px;height:200px;background:red;}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oDiv=document.querySelector('div');
+	oDiv.onclick=function(){
+		oDiv.style.WebkitTransition='1s all ease';
+		oDiv.style.width='500px';
+		oDiv.addEventListener('transitionend',function(){
+			//transitionend  当运动结束时触发
+			alert(1);
+		},false);
+	};
+},false);
+</script>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

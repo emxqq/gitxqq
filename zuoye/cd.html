@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{background:red;}
+.box_cd{ margin-top:300px;position:relative;top:0;left:0;}
+.box{width:200px;height:200px; background:url(cd/img_01.jpg) no-repeat;position:absolute;left:0;top:0;z-index:2;}
+.cd{ position:absolute;left:0;top:0;width:196px;height:196px; background:url(cd/cd.png) no-repeat;-webkit-transition:1s all ease;}
+.box_cd:hover .cd{-webkit-transform:translate(0,-80px) rotate(360deg);}
+</style>
+
+</head>
+
+<body>
+<div class="box_cd">
+    <div class="box"></div>
+    <div class="cd"></div>
+</div>
+</body>
+</html>

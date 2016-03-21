@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;
+  padding:0;
+  }
+div{width:300px;
+	height:200px;
+	background:#ccc;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-100px;
+	text-align:center;
+	line-height:40px;
+	-webkit-transform:scale(5,4);
+	opacity:0;
+	display:none;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oBtn=document.getElementById('btn');
+	var oDiv=document.querySelector('div');
+	var oClo=document.getElementById('close');
+	oBtn.onclick=function(){
+		oDiv.style.display='block';
+		oDiv.style.WebkitTransition='1s all ease';
+		setTimeout(function(){
+			oDiv.style.opacity=1;
+			oDiv.style.WebkitTransform='scale(1,1)';
+		},0);
+		
+	};
+	oClo.onclick=function(){
+		oDiv.style.WebkitTransform='scale(5,4)';
+		oDiv.style.opacity=0;
+		function fnEnd(){
+			oDiv.style.display='none';
+			oDiv.removeEventListener('transitionend',fnEnd,false);
+		}
+		oDiv.addEventListener('transitionend',fnEnd,false);
+	
+		
+	};
+	
+},false);
+</script>
+</head>
+
+<body>
+<input type="button" value="登录" id="btn">
+<div>
+	用户名：<input type="text"><br/>
+    密&nbsp;码：<input type="password"><br/>
+    <input type="button" value="登录">
+    <a href="javascript:;">注册</a>
+	<a href="javascript:;" id="close">X</a>
+</div>
+</body>
+</html>

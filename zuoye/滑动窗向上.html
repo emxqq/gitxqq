@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0; padding:0;
+				list-style:none;
+			}
+			.box{
+				width:1000px;
+				height:200px;
+				background:#ccc;
+				margin:100px auto;
+			}
+			ul{
+				margin-left:50px;
+				padding-top:60px;
+			}
+			li{
+				width:200px;
+				height:80px;
+				/*background:#000;*/
+				
+				margin-right:30px;
+				float:left;
+				border-radius: 10%;
+				position:relative;
+				z-index: 9;
+				/*box-shadow:0 0 0 0,inset:0 0 10px #000;*/
+			}
+			span{				
+				background:url(image/1.jpg) no-repeat;
+				width:200px;
+				height:80px;				
+				background-size:cover;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 10%;
+				
+			}
+			p{
+				width:200px;
+				height:80px;
+				background:#8C8371;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 10%;
+				-webkit-transition:1s all ease;
+				z-index: 15;
+				-webkit-transition:1s all ease;
+					
+			}
+		li:hover p{-webkit-transform:translate(0,-80px);}
+		</style>
+		
+	</head>
+	<body>
+		<div id="box" class="box">
+			<ul>
+				<li>
+					<span >
+						
+					</span>
+					<p></p>
+				</li>
+				<li>
+					<span >
+						
+					</span>
+					<p></p>
+				</li>
+				<li>
+					<span>
+						
+					</span>
+					<p></p>
+				</li>
+				<li>
+					<span >
+						
+					</span>
+					<p></p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

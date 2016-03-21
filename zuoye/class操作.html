@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oBtn=document.querySelector('input');
+	var oDiv=document.querySelector('div');
+	//oDiv.classList.add('active2');//添加class名
+	//oDiv.classList.remove('active2');//删除class
+	//alert(oDiv.classList.contains('on'));//是否包含这个class
+	oBtn.onclick=function(){
+		oDiv.classList.toggle('red');//切换class 点击删除，再点击添加，来回切换
+	};
+},false)
+</script>
+</head>
+
+<body>
+<input type="button" value="按钮">
+<div class="active on red"></div>
+</body>
+</html>

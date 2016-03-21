@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;
+  padding:0;}
+span{position:absolute;
+	 top:0;
+	 left:0;
+	 width:100px;
+	 height:100px;
+	 border-radius:50%;
+	 background:#FF3;
+	 box-shadow:0 0 100px #FF0;
+	 z-index:2;
+	 }
+p{text-align:center;
+  font-size:50px;
+  width:400px;
+  height:50px; 
+  line-height:50px;
+  font-weight:bold; 
+  font-family:楷体;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-200px; 
+  margin-top:-25px;
+  text-shadow:0 0 0 #000; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oS=document.getElementsByTagName('span')[0];
+	var oP=document.getElementsByTagName('p')[0];
+	document.onmousemove=function(ev){
+		oS.style.left = ev.clientX-oS.offsetWidth/2+'px';
+		oS.style.top = ev.clientY-oS.offsetHeight/2+'px';
+		
+		var disX = (oP.offsetLeft+oP.offsetWidth/2)-(oS.offsetLeft+oS.offsetWidth/2);
+		var disY = (oP.offsetTop+oP.offsetHeight/2)-(oS.offsetTop+oS.offsetHeight/2);
+		var c = Math.sqrt(disX*disX+disY*disY);
+		
+		oP.style.textShadow=disX/3+'px'+disY/3+'px '+c/10+'px #000';
+		/*？？？？、*/
+		
+	};
+},false);
+</script>
+</head>
+
+<body>
+<span></span>
+<p>你是风儿我是沙</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="test">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="angular.js"></script>
+<script>
+var app =angular.module('test',[]);
+app.controller('index',function($scope){
+	$scope.arr=[{"name":"张三","age":15},{"name":"小米","age":12},{"name":"叮当","age":25},{"name":"张强","age":14}]
+});
+</script>
+</head>
+
+<body ng-controller="index">
+<ul>
+	<li ng-repeat="item in arr">我的名字叫{{item.name}},芳龄{{item.age}}岁</li>
+</ul>
+</body>
+</html>

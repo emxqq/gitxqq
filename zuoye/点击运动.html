@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;
+  padding:0;}
+div{width:200px;
+	height:200px;
+	margin:200px auto;
+	background:#F09;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oDiv=document.querySelector('div');
+	oDiv.style.WebkitTransition='1s all ease';
+	oDiv.style.MozTransition='1s all ease';
+	oDiv.style.msTransition='1s all ease';
+	oDiv.style.OTransition='1s all ease';
+	oDiv.style.transiton='1s all ease';
+	oDiv.onclick=function(){
+		oDiv.style.width='400px';
+		oDiv.style.height='400px';
+		oDiv.style.background='red';
+	};
+	
+},false)
+</script>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>
